@@ -1,0 +1,35 @@
+{
+   "name": "dcastalia-chatbot",
+   "version": "1.0.0",
+   "private": true,
+   "type": "module",
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "scrape": "node lib/updateJson.js",
+      "clean-data": "node lib/cleanData.js",
+      "optimize-data": "node lib/optimizeData.js",
+      "clean": "rm -rf app/data/dcastalia.json && echo 'Data cleaned'",
+      "optimize": "next build && next export"
+   },
+   "dependencies": {
+      "@langchain/community": "^0.3.53",
+      "@langchain/ollama": "^0.2.3",
+      "@langchain/openai": "^0.6.9",
+      "axios": "^1.6.7",
+      "cheerio": "^1.0.0-rc.12",
+      "fs-extra": "^11.2.0",
+      "langchain": "^0.3.31",
+      "next": "^14.0.4",
+      "ollama": "^0.1.0",
+      "openai": "^4.15.0",
+      "p-retry": "^6.2.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "xml2js": "^0.6.2"
+   },
+   "devDependencies": {
+      "mkcert": "^1.4.4"
+   }
+}
