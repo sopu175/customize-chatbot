@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "scrape": "node scripts/scraper.js"
   },
   "dependencies": {
@@ -64,6 +64,7 @@
     "input-otp": "^1.2.4",
     "jsdom": "^26.1.0",
     "langchain": "^0.3.31",
+    "limiter": "^3.0.0",
     "lucide-react": "^0.446.0",
     "next": "^15.5.0",
     "next-themes": "^0.3.0",
@@ -82,5 +83,8 @@
     "vaul": "^0.9.9",
     "vercel": "^32.0.1",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1"
   }
 }
