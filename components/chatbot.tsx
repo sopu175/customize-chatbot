@@ -237,9 +237,9 @@ export function Chatbot() {
 
   return (
     <Card className="w-full max-w-4xl mx-auto h-[600px] flex flex-col">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-2xl font-bold flex items-center gap-2">
-          <Bot className="h-6 w-6 text-primary" />
+      <CardHeader className="flex background-header-chat flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-2xl text-white font-bold flex items-center gap-2">
+          <Bot className="h-6 w-6 text-white" />
           Dcastalia Chatbot
           {isLoading && (
             <div className="flex items-center gap-1 ml-2">

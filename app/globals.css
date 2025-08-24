@@ -91,9 +91,20 @@
     overflow-y: scroll;
     padding-bottom: 70px;
 }
+.background-header-chat{
+    background: #009975;
+    padding-bottom: 20px;
+}
 .input-feild-meta{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
+    background: #347474;
+}
+
+@media(max-width: 767px){
+    .tracking-tight{
+        font-size: 1rem;
+    }
 }

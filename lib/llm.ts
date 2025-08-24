@@ -1,6 +1,6 @@
 import { ChatOpenAI } from '@langchain/openai';
 import { ChatOllama } from "@langchain/ollama";
-
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
 async function testOllamaConnection(baseUrl: string): Promise<boolean> {
     try {
@@ -24,7 +24,18 @@ export function getLLM() {
 
         return new ChatOpenAI({
             openAIApiKey: process.env.OPENAI_API_KEY,
-            modelName: 'gpt-4',
+            modelName: 'gpt-4o-mini',
+            temperature: 0.7,
+        });
+    }
+
+    if (provider === 'google') {
+        if (!process.env.GOOGLE_API_KEY) {
+            throw new Error('Google API key not found in environment variables');
+        }
+        return new ChatGoogleGenerativeAI({
+            apiKey: process.env.GOOGLE_API_KEY,
+            model: 'gemini-2.0-flash',   // or "models/chat-bison-001" if using PaLM
             temperature: 0.7,
         });
     }

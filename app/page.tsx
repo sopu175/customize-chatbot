@@ -9,7 +9,7 @@ export default function Home() {
                         💬 Dcastalia Chatbot
                     </h1>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        A powerful chatbot powered by LangChain + Next.js, built using live data from{' '}
+                        A powerful chatbot powered by Dcastalia LTD, built using live data from{' '}
                         <a
                             href="https://dcastalia.com"
                             target="_blank"
